@@ -66,16 +66,17 @@ void swap(int* const x, int* const y) {
 }
 
 void bubble(int* const data, int const size) {
-   int smallest; // index of smallest element
+   int biggest;  // index of biggest element
 
    for ( int i = 0; i < size - 1; i++ ) {
-      smallest = i; 
+      biggest = i; 
       for ( int k = i + 1; k < size; k++ ){
 
-         if ( data[k] > data[smallest] )
-            smallest = k;
-      }
-      swap( &data[i], &data[smallest] );
+         if ( data[k] > data[biggest] )
+            biggest = k;
+        
+       }
+      swap( &data[i], &data[biggest] );
    } 
 }
 
