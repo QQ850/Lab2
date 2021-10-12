@@ -1,1 +1,12 @@
+My understanding of the best practiuces oto use dynamic memory allocation in C++:
 
+1. *p is a pointer, p refers to the memory location.
+
+2. When pointer is used as a parameter, should have const. like "int* const data". 
+
+3. assume int arr = new int[3] {1, 2, 3};
+          int *ip = arr = &arr[0];
+          and the value of *(ip + i) is arr[i];
+          
+4.int *a = new int; --> paired with delete a;
+  int *a = new int[size]; --> paired with delete[] a;
